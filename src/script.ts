@@ -187,3 +187,80 @@ enum StatusCodes {
 }
 
 console.table(StatusCodes.Accepted); // == 202
+
+
+
+// practice season //
+
+let username : string = 'Sagor Hossain';
+let age : number = 32;
+let isCaptain1 : boolean = true;
+// Array //
+
+let numbers : number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// tuples 
+
+let user4 : [number, string, boolean] = [32, 'Sagor Hossain', true];
+
+// object 
+
+let person6 : { name: string, age: number, isCaptain: boolean } = {  
+  name: 'Sagor Hossain', age: 32, isCaptain: true 
+};  
+
+
+// union type //
+
+let id : string | number ;
+
+id = 32;
+id = 'Sagor Hossain';
+
+
+// fuction type //
+
+function adder (a: number, b: number ) : number {
+  return a + b;
+}
+
+// inerface //
+
+interface Player7 {
+  name: string;
+  age: number;
+  isCaptain: boolean;
+}
+
+const player8 : Player7 = {
+  name: 'Sagor Hossain',
+  age: 32,
+  isCaptain: true
+}
+
+
+// alias //
+
+type user = {
+  id : number;
+  name : string;
+}
+
+type admin = user & { role: string };
+
+
+// enum//
+enum userRole {
+  admin, 
+  user,
+  guest,
+}
+
+const userRole1: userRole = userRole.admin;
+
+
+// generics //
+
+function identity <T> (value: T) : T {
+  return value;
+}
